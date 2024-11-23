@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>MIEM Emprendedor Page</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openProfileMenu()">
+        <ion-icon name="person-circle-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="logo-container">
+  </div>
+  <div class="login-section ion-padding">
+    <div class="heading ion-padding">
+      <h1>Crea tu negocio</h1>
+      <p>Completa los datos para continuar</p>
+    </div>
+    <div class="login-form ion-padding">
+      <div class="form-input">
+        <ion-icon name="storefront-outline"></ion-icon>        <ion-item>
+          <ion-label position="floating">Nombre de negocio</ion-label>
+          <ion-input type="text" [(ngModel)]="nombreemp"></ion-input>
+        </ion-item>
+      </div>
+      <div class="form-input">
+        <ion-icon name="call-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">Numero de telefono</ion-label>
+          <ion-input type="email" [(ngModel)]="numero"></ion-input>
+        </ion-item>
+      </div>
+      <div class="form-input">
+        <ion-icon name="navigate-circle-outline" style="padding-top: 10px;"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">Latitud</ion-label>
+          <ion-input type="email" [(ngModel)]="lat"></ion-input>
+          <ion-label position="floating">Longitud</ion-label>
+          <ion-input type="email" [(ngModel)]="lng"></ion-input>
+
+        </ion-item>
+      </div>
+
+    </div>
+    <div class="action-button ion-padding">
+      <ion-button class="singup-button" size="large" (click)="signUpemp(); clearFields()">Siguiente</ion-button>
+    </div>
+  </div>
+</ion-content>
